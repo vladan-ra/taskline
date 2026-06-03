@@ -1,0 +1,24 @@
+{
+  "name": "taskline",
+  "version": "1.0.0",
+  "description": "Task Timeline project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://vladan-ra@github.com/vladan-ra/taskline.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/vladan-ra/taskline/issues"
+  },
+  "homepage": "https://github.com/vladan-ra/taskline#readme",
+  "dependencies": {
+    "convex": "^1.40.0"
+  }
+}

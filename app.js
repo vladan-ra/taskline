@@ -1,3 +1,7 @@
+const CONVEX_URL = "https://outgoing-ant-963.eu-west-1.convex.cloud";
+const client = new convex.ConvexClient(CONVEX_URL);
+console.log("Convex Client successfully loaded:", client);
+
 const CAT_COLORS = {
   people:'#534AB7', admin:'#185FA5', process:'#0F6E56',
   adhoc:'#D85A30', planning:'#639922', ops:'#BA7517',
