@@ -1,10 +1,10 @@
 import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
-import { priorityValidator } from "./schema";
+import { categoryValidator, priorityValidator } from "./schema";
 
 // Fetch every task. The timeline renders the full set client-side and
 // sorts/filters in memory, so we intentionally return all rows here.
-export const list = query({
+export const get = query({
   args: {},
   handler: async (ctx) => {
     return await ctx.db.query("tasks").collect();
@@ -15,7 +15,7 @@ export const list = query({
 export const create = mutation({
   args: {
     name: v.string(),
-    category: v.string(),
+    category: categoryValidator,
     priority: priorityValidator,
     start: v.optional(v.string()),
     due: v.optional(v.string()),
@@ -31,7 +31,7 @@ export const update = mutation({
   args: {
     id: v.id("tasks"),
     name: v.optional(v.string()),
-    category: v.optional(v.string()),
+    category: v.optional(categoryValidator),
     priority: v.optional(priorityValidator),
     start: v.optional(v.string()),
     due: v.optional(v.string()),
